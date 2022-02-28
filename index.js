@@ -28,21 +28,33 @@ const nestedMuppet = {
 // Strings
 
 // 1. Use destructuring to assign appropriate variables based on the sounds animals make.
+let [moo, neigh, baa, oink, cluck] = [farmAnimals.slice(0,3), farmAnimals.slice(4,9), farmAnimals.slice(10,15), farmAnimals.slice(16,19), farmAnimals.slice(20)]
+
 
 // 2. Bolt the horse wandered off, so just give us four animals, and let's name them bessie, dolly, babe, and little.
-
+let [bessie, dolly, babe, little] = [farmAnimals.slice(0,3),farmAnimals.slice(10,15), farmAnimals.slice(16,19), farmAnimals.slice(20)]
 // 3. Little the chicken had to go back to the coop, so now we're left with three. Let's use color variables of blackAndWhite, black, and pink.
+let [blackAndWhite, black, pink] = [farmAnimals.slice(0,3),farmAnimals.slice(10,15), farmAnimals.slice(16,19)]
+
 
 // Arrays
 
 // 4. Use destructuring to assign appropriate variables using the color names.
-
+let [red, orange, yellow, green, blue, indigo, violet] = colors
 // 5. Some people have a really hard time picking out indigo, so let's leave that one out, using the first letter of each color as the variable names.
-
+let newColors = [...colors]
+newColors.splice(5, 1)
+let[r, o, y, g, b,v] = newColors
 // 6. But wait! Indigo is now feeling *super* left out. Let's only assign indigo using indg. 
-
+let indg = colors[5]
 // Objects
 
 // 7. Use destructuring to assign all variables using the keys as the variable names
+let {muppetName, color, song, job, partner} = muppet
+let {nestedName, nestedColor, album,nestedJob,nestedPartner} = nestedMuppet
 
 // 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
+let song2= nestedMuppet.album.song2
+let song4= nestedMuppet.album.song4
+nestedJob = nestedMuppet.nestedJob
+nestedPartner = nestedMuppet.nestedPartner
